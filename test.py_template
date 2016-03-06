@@ -1,0 +1,28 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import unittest
+import tpl_tests
+import os.path
+import re
+class Test<pattern_dir_name>(tpl_tests.TplTestCase):
+    def setUp(self):
+        tpl_tests.TplTestCase.setUp(self)
+        self.loadPatterns()
+ 
+    def tearDown(self):
+        tpl_tests.TplTestCase.tearDown(self)
+ 
+    def loadPatterns(self):
+        self.preProcessTpl(<includes>)
+        self.assertTrue(os.path.isdir('tpl110'))
+        self.loadTplFiles(<parsed_includes>)
+ 
+ 
+class TestStandalone(Test<pattern_dir_name>):
+<queries_block>
+ 
+# <test_cases_block>
+ 
+if __name__ == "__main__":
+    # Run tests
+    tpl_tests.main(__name__)
